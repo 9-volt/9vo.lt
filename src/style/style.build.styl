@@ -1,0 +1,79 @@
+/*************************
+	Imports
+
+	NOTE: nib documentation http://www.fontsquirrel.com/tools/webfont-generator
+**************************/
+
+// System imports
+@import "nib"
+
+/*************************
+	DOM
+**************************/
+
+/* Main styles */
+
+body {
+  font-family: 'Voces', cursive;
+  font-size-adjust:0.5;
+  font-weight:200;
+  font-style:normal;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Monosten A", Courier, monospace;
+  font-size-adjust:0.5;
+  font-weight:bold;
+  font-style:normal;
+}
+
+/* Row members
+   ***********/
+.row-circles
+	margin-top 2em
+	.columns
+		margin-bottom 1.875em
+	.circle
+		text-align center
+		margin 0 1em
+		position relative
+		min-height 100px
+		.avatar
+			width: 100px
+			height: auto
+			border-radius: 50%
+			position: absolute
+			top 0
+			left 0
+		.name
+			font-size: 1.5em
+			font-family:"Monosten A", Courier, monospace
+			line-height: 1.6
+			margin 0 0 0 110px
+			padding 24px 0 0
+		.description
+			margin 0 0 0 110px
+			//
+
+.row-blog-previews
+	.read-more
+		color: #2fbdb6
+
+@media (max-width: 767px)
+	.row-circles
+		.columns
+		.circle
+			.avatar
+				width: 100px
+				height: auto
+				border-radius: 50%
+				position: relative
+			.name
+				margin 0
+				padding 0
+			.description
+				margin 0
+				//
+

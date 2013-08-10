@@ -1,0 +1,10 @@
+{
+  "name": "9volt",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-stylus": "~0.5.1",
+    "matchdep": "~0.1.2"
+  }
+}

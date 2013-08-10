@@ -1,0 +1,8 @@
+# Node packages
+node_modules
+
+# Coffee map
+*.map
+
+# Temporary files
+*.tmp

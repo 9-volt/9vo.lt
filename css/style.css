@@ -7,6 +7,7 @@ h1,h2,h3,h4,h5,h6{font-family:"Monosten A",Courier,monospace;font-size-adjust:.5
 .row-circles .circle .name{font-size:1.5em;font-family:"Monosten A",Courier,monospace;line-height:1.6;margin:0 0 0 110px;padding:24px 0 0}
 .row-circles .circle .description{margin:0 0 0 110px}
 .row-blog-previews .read-more{color:#2fbdb6}
+.container-blogpost article footer{color:#999}
 @media (max-width: 767px){.row-circles .columns .avatar,.row-circles .circle .avatar{width:100px;height:auto;-webkit-border-radius:50%;border-radius:50%;position:relative}
 .row-circles .columns .name,.row-circles .circle .name{margin:0;padding:0}
 .row-circles .columns .description,.row-circles .circle .description{margin:0}

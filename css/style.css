@@ -1,0 +1,25 @@
+/* Main styles */
+
+body {
+  /*font-family:"Monosten E", Courier, monospace;*/
+  font-family: 'Voces', cursive;
+  font-size-adjust:0.5;
+  font-weight:200;
+  font-style:normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Monosten A", Courier, monospace;
+  font-size-adjust:0.5;
+  font-weight:bold;
+  font-style:normal;
+}
+
+/* Row members
+   ***********/
+.row-circles {margin-top: 2em;}
+.row-circles .columns{ margin-bottom: 1.875em;}
+.row-circles .circle{text-align: center;margin: 0 1em;}
+.row-circles .circle .avatar{ width: 100%; max-width: 220px; height: auto; border-radius: 50%;}
+.row-circles .circle .name{ font-size: 1.5em; font-family:"Monosten A", Courier, monospace;line-height: 1.6;}
+.row-circles .circle .description{}

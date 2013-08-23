@@ -1,0 +1,117 @@
+// Responsive 768 to 991 px
+// This file shouldnt be used as media
+///////////////////////////
+
+@media (min-width: 768px) and (max-width: 991px)
+  body
+    //
+
+/* Main styles */
+
+#header
+  float left
+  width 210px
+  >.wrapper
+    padding 25px 30px
+    a.logo
+      display block
+      size 137px 137px
+      margin 0 auto
+      img
+        //
+    nav
+      margin 30px 6px
+      ul
+        list-style none
+        margin 0
+        padding 0
+        li
+          position: relative
+          &:before
+            content ''
+            position: absolute
+            top 6px
+            left -11px
+            size 8px 8px
+            border-radius 4px
+            background black
+            display none
+          &:hover:before
+            display block
+          &.active
+            &:before
+              background $red
+              display block
+            a
+              color $red
+          a
+            color black
+            font-size 16px
+            text-decoration none
+
+
+#container
+  margin 0 0 0 210px
+  >.wrapper
+    //
+
+  // Portofolio
+  .container-portofolio
+    max-width 1000px
+    .item
+      width 33.33%
+      position: relative
+      float left
+      &:hover
+        header
+          display block
+        .icons
+          display block
+      .ratio
+        img
+          display block
+          width 100%
+          height auto
+      .thumb
+        display block
+        position: absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        margin 0 1px 1px 0
+        img
+          width 100%
+          height auto
+          display block
+      header
+        display none
+        position: absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+        background rgba($white, 0.9)
+        text-align center
+        cursor pointer
+        .table
+          width 100%
+        h2
+          color $green
+          font-size 1.2em
+          a
+            color $green
+            text-decoration none
+      .icons
+        display none
+        position: absolute
+        top 0
+        bottom 0
+        left -22px
+        width 45px
+        a
+          opacity 0.8
+          display: inline-block
+          border-radius 22px
+          &:hover
+            opacity 1

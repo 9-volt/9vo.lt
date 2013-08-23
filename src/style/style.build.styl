@@ -7,19 +7,21 @@
 // System imports
 @import "nib"
 
-/*************************
-	DOM
-**************************/
+@import "normalize"
 
-/* Main styles */
+$white = #fefef4
+$green = #2fbeb6
+$red = #ef4a48
+$redDarken = #e24849
+
+@import "utils"
 
 body {
   font-family: 'Voces', cursive;
   font-size-adjust:0.5;
   font-weight:200;
   font-style:normal;
-  padding-top: 50px;
-  padding-bottom: 20px;
+  background $white
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,60 +31,19 @@ h1, h2, h3, h4, h5, h6 {
   font-style:normal;
 }
 
-/* Row members
-   ***********/
-.row-circles
-	margin-top 2em
-	.columns
-		margin-bottom 1.875em
-	.circle
-		text-align center
-		margin 0 1em
-		position relative
-		min-height 100px
-		.avatar
-			width: 100px
-			height: auto
-			border-radius: 50%
-			position: absolute
-			top 0
-			left 0
-		.name
-			font-size: 1.5em
-			font-family:"Monosten A", Courier, monospace
-			line-height: 1.6
-			margin 0 0 0 110px
-			padding 24px 0 0
-		.description
-			margin 0 0 0 110px
-			//
+@import "responsive-768px-991px" // implicit style
+@import "responsive-1200px-max"
+@import "responsive-992px-1199px"
+@import "responsive-min-767px"
+@import "responsive-min-480px"
 
-.row-blog-previews
-	.read-more
-		color: #2fbdb6
+/*************************
+	DOM
+**************************/
 
-.container-blogpost
-	article
-		header
-			//
-		.body
-			//
-		footer
-			color #999
 
-@media (max-width: 767px)
-	.row-circles
-		.columns
-		.circle
-			.avatar
-				width: 100px
-				height: auto
-				border-radius: 50%
-				position: relative
-			.name
-				margin 0
-				padding 0
-			.description
-				margin 0
-				//
+
+
+
+
 

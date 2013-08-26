@@ -21,6 +21,29 @@
   &.icon-image
     background-image url(../img/icon-image.png)
 
+.head-icon
+  position: relative
+  &:before
+    content ''
+    position: absolute
+    top 0
+    left 0
+    size 44px 44px
+    background-color $red
+    background-position 50% 50%
+    background-repeat no-repeat
+    border-radius 22px
+  &.icon-post:before
+    background-image url(../img/icon-post.png)
+  &.icon-link:before
+    background-image url(../img/icon-link.png)
+  &.icon-quote:before
+    background-image url(../img/icon-quote.png)
+  &.icon-video:before
+    background-image url(../img/icon-video.png)
+  &.icon-image:before
+    background-image url(../img/icon-image.png)
+
 .table
   display table
   height 100%

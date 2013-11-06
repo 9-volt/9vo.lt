@@ -36,8 +36,8 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 textarea{overflow:auto;vertical-align:top;}
 table{border-collapse:collapse;border-spacing:0}
-body{font-family:"Monosten",Courier,monospace;font-size-adjust:.5;font-weight:200;font-style:normal;background:#fff;color:#000;font-size:1em}
-h1,h2,h3,h4,h5,h6,b,strong{font-family:"Monosten",Courier,monospace;font-size-adjust:.5;font-weight:bold;font-style:normal}
+body{font-family:"Monosten E",Courier,monospace;font-size-adjust:.5;font-weight:200;font-style:normal;background:#fff;color:#000;font-size:1em}
+h1,h2,h3,h4,h5,h6,b,strong{font-family:"Monosten C",Courier,monospace;font-size-adjust:.5;font-weight:bold;font-style:normal}
 a{color:#3bbdb5}
 .container{width:1162px;margin:0 auto}
 .clearfix{zoom:1}
@@ -57,29 +57,29 @@ a{color:#3bbdb5}
 .bg-red{background:#ef4a48;color:#000;}
 .bg-red a{color:#fff;}
 .bg-red a.hover,.bg-red a.active,.bg-red a:hover{color:#3bbdb5}
-.btn{display:inline-block;padding:.6em .7em .3em;text-decoration:none;font-size:1.2em}
+.btn{display:inline-block;padding:.3em .7em .3em;text-decoration:none;font-size:1.2em}
 .btn-white{background:#fff;color:#15123f;}
 .btn-white:hover{background:#ef4a48;color:#fff}
 .btn-green{background:#3bbdb5;color:#fff;}
 .btn-green:hover{background:#ef4a48;color:#fff}
 .header{height:92px;}
-.header .logo{margin:0;padding:34px 0 0;}
+.header .logo{margin:0;padding:30px 0 0;}
 .header .logo img{height:29px;width:auto}
 .header nav{text-transform:uppercase;}
-.header nav ul{float:right;display:inline-block;margin:0;padding:43px 0 0;list-style:none;white-space:nowrap;}
+.header nav ul{float:right;display:inline-block;margin:0;padding:38px 0 0;list-style:none;white-space:nowrap;font-size:1.1em;}
 .header nav ul li{display:inline-block;padding:0 0 0 2em;}
 .header nav ul li a{text-decoration:none}
 .hero{padding:5em 0;}
 .hero .container{line-height:1.25;}
 .hero .container p{margin:0;padding:0}
-.hero .container a.readmore{margin:1.2em 0 0;padding:.4em .7em .2em}
+.hero .container a.readmore{margin:1.2em 0 0}
 .title{text-align:center;font-size:1.4em;padding:.8em 0 .6em}
 .blocks:after{content:"";display:block;clear:both}
 .blocks .block{float:left;width:31.3%;margin:0 3% 3% 0;}
 .blocks .block:nth-child(3n){margin-right:0}
 .blocks .block a{display:block;}
 .blocks .block a img{width:100%;height:auto}
-.blocks .more{font-size:1.1em;padding:.6em .7em .3em}
+.blocks .more{font-size:1.1em}
 .text-content{width:70%;margin:0 auto;}
 .text-content p{padding:.4em 0;font-size:1.1em;line-height:1.5;}
 .text-content p img{max-width:100%;height:auto}

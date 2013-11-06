@@ -1,5 +1,6 @@
 $(function() {
   // Load Font deck font
+  // Not using this method as if ping is big then there is a font-jump
 /*  WebFontConfig = { fontdeck: { id: '39436' } };
 
   (function() {
@@ -10,5 +11,5 @@ $(function() {
     wf.async = 'true';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
-  })();*/
-})
+  })();
+*/})

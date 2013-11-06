@@ -2,8 +2,45 @@
 /////////////////////////
 
 @media (max-width: 767px)
-  #container
-    // Portofolio
-    .container-portofolio
-      .item
-        width 50%
+  .container
+    width 100%
+  .header
+    height 64px
+    .logo
+      padding 11px 0 0 20px
+      img
+        height 20px
+        width auto
+    nav
+      ul
+        padding 21px 0
+        font-size 1em
+        li
+          display: inline-block
+          padding 0 1em 0
+  .hero
+    .container
+      padding-left 1em
+      padding-right 1em
+  .blocks
+    .block
+      float left
+      width 48%
+      margin 0 4% 4% 0
+      &:nth-child(3n)
+        margin-right 4%
+      &:nth-child(2n)
+        margin-right 0
+  .text-content
+    width auto
+    padding-left 1em
+    padding-right 1em
+  .footer
+    margin 18px 0 0
+    height 80px
+    .logo
+      margin 1em 2em 0 0
+      img
+        width 50px
+    .content
+      padding 2em 0 0

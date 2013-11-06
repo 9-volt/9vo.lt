@@ -4,20 +4,25 @@ module.exports = function(grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  // configurable paths
-  var fruitConfig = {
-    src: 'src',
-    mockup: '.'
-  };
-
   // Project configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    fruit: fruitConfig,
+    config: {
+      src: 'src'
+    , mockup: '.'
+    },
     watch: {
       stylus: {
-        files: ['<%= fruit.src %>/style/{,*/}*.styl'],
+        files: ['<%= config.src %>/css/{,*/}*.styl'],
         tasks: ['stylus:development'],
+        options: {
+          nospawn: true,
+          livereload: true
+        }
+      },
+      template: {
+        files: ['<%= config.src %>/html/{,*/}*.hbs', '<%= config.src %>/html/data.json'],
+        tasks: ['template'],
         options: {
           nospawn: true,
           livereload: true
@@ -29,10 +34,10 @@ module.exports = function(grunt) {
           livereload: true
         },
         files: [
-          '<%= fruit.mockup %>/{,*/}*.html',
-          '<%= fruit.mockup %>/{,*/}*.css',
-          '<%= fruit.mockup %>/{,*/}*.js',
-          '<%= fruit.mockup %>/{,*/}*.{png,jpg,jpeg,gif}'
+          '<%= config.mockup %>/{,*/}*.html',
+          '<%= config.mockup %>/{,*/}*.css',
+          '<%= config.mockup %>/{,*/}*.js',
+          '<%= config.mockup %>/{,*/}*.{png,jpg,jpeg,gif}'
         ],
         tasks: []
       }
@@ -45,7 +50,7 @@ module.exports = function(grunt) {
           linenos: true
         },
         files: {
-          '<%= fruit.mockup %>/css/style.css': '<%= fruit.src %>/style/*.build.styl' // compile and concat into single file
+          '<%= config.mockup %>/css/style.css': '<%= config.src %>/css/*.build.styl' // compile and concat into single file
         }
       },
       production: {
@@ -53,14 +58,40 @@ module.exports = function(grunt) {
           urlfunc: 'embedurl'
         },
         files: {
-          '<%= fruit.mockup %>/css/style.css': '<%= fruit.src %>/style/*.build.styl'
+          '<%= config.mockup %>/css/style.css': '<%= config.src %>/css/*.build.styl'
         }
+      }
+    },
+    clean: {
+      all: {
+        src: ['<%= config.mockup %>/*.html']
+      }
+    },
+    template: {
+      all: {
+        engine: 'handlebars',
+        cwd: '<%= config.src %>/html/',
+        partials: ['<%= config.src %>/html/partials/*.hbs'],
+        data: '<%= config.src %>/html/data.json',
+        options: {
+        },
+        files: [
+          {
+            expand: true,     // Enable dynamic expansion.
+            cwd: '<%= config.src %>/html/',      // Src matches are relative to this path.
+            src: '*.hbs', // Actual pattern(s) to match.
+            dest: '<%= config.mockup %>/',   // Destination path prefix.
+            ext: '.html'  // Dest filepaths will have this extension.
+          }
+        ]
       }
     }
   });
 
   grunt.registerTask('build', [
-    'stylus:production'
+    'stylus:production',
+    'clean',
+    'template'
   ]);
 
   // build alias
@@ -68,6 +99,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('server', [
     'stylus:development',
+    'clean',
+    'template',
     'watch'
   ]);
 

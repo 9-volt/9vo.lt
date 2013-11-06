@@ -1,6 +1,6 @@
 $(function() {
   // Load Font deck font
-  WebFontConfig = { fontdeck: { id: '39436' } };
+/*  WebFontConfig = { fontdeck: { id: '39436' } };
 
   (function() {
     var wf = document.createElement('script');
@@ -10,5 +10,5 @@ $(function() {
     wf.async = 'true';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
-  })();
+  })();*/
 })

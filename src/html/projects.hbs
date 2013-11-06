@@ -1,11 +1,11 @@
 {{> partials/html_head}}
   <!-- header start -->
-  <header id="header" class="header bg-yellow">
+  <header id="header" class="header bg-red">
     <div class="container">
       <nav>
         <ul>
           <li><a href="post.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
@@ -17,24 +17,13 @@
   </header>
   <!-- header end -->
 
-  <div class="hero bg-green">
-    <div class="container">
-      <div class="content">
-        <p>_hi.<br>we are 9volt.<br>a collective of creative<br>programmers and designers</p>
-        <a href="post.html" class="readmore btn btn-white">READ MORE</a>
-      </div>
-    </div>
-  </div>
-
   <!-- container start -->
   <div class="container" id="container">
     <h2 class="title">PROJECTS</h2>
     <div class="blocks">
-      {{#each data.repeat6}}
+      {{#each data.repeat12}}
       <div class="block"><a href="article.html"><img src="../images/thumbnail.png" alt="Project"></a></div>
       {{/each}}
-      <div class="clearfix"></div>
-      <a href="projects.html" class="more btn btn-green">VIEW MORE</a>
     </div>
   </div>
   <!-- container end -->

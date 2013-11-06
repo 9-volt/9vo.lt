@@ -8,8 +8,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     config: {
-      src: 'src'
-    , mockup: '.'
+      base: '.',
+      src: 'src',
+      mockup: 'mockup'
     },
     watch: {
       stylus: {
@@ -34,10 +35,10 @@ module.exports = function(grunt) {
           livereload: true
         },
         files: [
-          '<%= config.mockup %>/{,*/}*.html',
-          '<%= config.mockup %>/{,*/}*.css',
-          '<%= config.mockup %>/{,*/}*.js',
-          '<%= config.mockup %>/{,*/}*.{png,jpg,jpeg,gif}'
+          '<%= config.base %>/{,*/}*.html',
+          '<%= config.base %>/{,*/}*.css',
+          '<%= config.base %>/{,*/}*.js',
+          '<%= config.base %>/{,*/}*.{png,jpg,jpeg,gif}'
         ],
         tasks: []
       }
@@ -50,7 +51,7 @@ module.exports = function(grunt) {
           linenos: true
         },
         files: {
-          '<%= config.mockup %>/css/style.css': '<%= config.src %>/css/*.build.styl' // compile and concat into single file
+          '<%= config.base %>/css/style.css': '<%= config.src %>/css/*.build.styl' // compile and concat into single file
         }
       },
       production: {
@@ -58,7 +59,7 @@ module.exports = function(grunt) {
           urlfunc: 'embedurl'
         },
         files: {
-          '<%= config.mockup %>/css/style.css': '<%= config.src %>/css/*.build.styl'
+          '<%= config.base %>/css/style.css': '<%= config.src %>/css/*.build.styl'
         }
       }
     },

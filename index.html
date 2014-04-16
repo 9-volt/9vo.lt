@@ -11,7 +11,7 @@ page_bg: ''
   <h2 class="title">PROJECTS</h2>
   <div class="blocks">
     {% for project in site.categories.projects limit:6 %}
-      <div class="block"><a href="{{ project.url }}"><img src="{{ site.baseurl }}/images/{{ project.thumbnail }}" alt="{{ project.title }}"></a></div>
+      <div class="block"><a href="{{ project.url }}"><img src="{{ site.baseurl }}/images/thumbnail/{{ project.thumbnail }}" alt="{{ project.title }}"></a></div>
     {% endfor %}
 
     <div class="clearfix"></div>

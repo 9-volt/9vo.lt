@@ -3,3 +3,4 @@ markdown: redcarpet
 pygments: true
 permalink: /news/:year/:month/:day/:title/
 baseurl: "http://9vo.lt"
+exclude: [node_modules]

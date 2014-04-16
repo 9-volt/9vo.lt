@@ -1,10 +1,16 @@
 ---
 layout: default
+active_menu: 'projects'
+page_bg: 'red'
 ---
-Project layout
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
+<!-- container start -->
+<div class="container" id="container">
+  <h2 class="title">{{ page.title }}</h2>
+  <div class="text-content">
+    {{ content }}
+    <a href="{{ site.baseurl }}/projects.html" class="pull-left btn btn-green">&laquo;BACK TO PROJECTS</a>
+    <div class="clearfix"></div>
+  </div>
 </div>
+<!-- container end -->

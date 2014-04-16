@@ -1,9 +1,22 @@
 ---
 layout: default
+active_menu: 'blog'
+page_bg: 'red'
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<!-- container start -->
+<div class="container" id="container">
+  <h2 class="title">{{ page.title }}</h2>
+  <div class="text-content">
+    {{ content }}
+    <p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}" class="pull-left btn btn-green">PREV POST</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{page.next.url}}" class="pull-right btn btn-green">NEXT POST</a>
+    {% endif %}
+    <div class="clearfix"></div>
+  </div>
 </div>
+<!-- container end -->

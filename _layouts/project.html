@@ -9,7 +9,13 @@ page_bg: 'red'
   <h2 class="title">{{ page.title }}</h2>
   <div class="text-content">
     {{ content }}
-    <a href="{{ site.baseurl }}/projects.html" class="pull-left btn btn-green">&laquo;BACK TO PROJECTS</a>
+
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}" class="pull-left btn btn-green">PREV POST</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{page.next.url}}" class="pull-right btn btn-green">NEXT POST</a>
+    {% endif %}
     <div class="clearfix"></div>
   </div>
 </div>

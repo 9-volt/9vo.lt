@@ -1,0 +1,19 @@
+---
+layout: default
+title: ''
+active_menu: 'blog'
+page_bg: 'green'
+---
+
+<!-- container start -->
+<div class="container" id="container">
+  <h2 class="title">BLOG</h2>
+  <div class="blocks">
+    {% for project in site.categories.blog %}
+      <div class="block"><a href="{{ project.url }}"><img src="{{ site.baseurl }}/images/thumbnail/{{ project.thumbnail }}" alt="{{ project.title }}"></a></div>
+    {% endfor %}
+
+    <div class="clearfix"></div>
+  </div>
+</div>
+<!-- container end -->

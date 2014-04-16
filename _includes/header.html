@@ -1,15 +1,15 @@
 <!-- header start -->
-<header id="header" class="header bg-yellow">
+<header id="header" class="header bg-{{ include.bg }}">
   <div class="container">
     <h1 class="logo">
       <a href="http://9vo.lt" title="9vo.lt"><img src="../img/logo-9volt-text.png" alt="9vo.lt logo"></a>
     </h1>
     <nav>
       <ul>
-        <li><a href="post.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="post.html">Blog</a></li>
+        <li><a {% if include.active == "about" %}class="active"{% endif %} href="post.html">About</a></li>
+        <li><a {% if include.active == "projects" %}class="active"{% endif %} href="projects.html">Projects</a></li>
+        <li><a {% if include.active == "team" %}class="active"{% endif %} href="team.html">Team</a></li>
+        <li><a {% if include.active == "blog" %}class="active"{% endif %} href="post.html">Blog</a></li>
       </ul>
     </nav>
   </div>

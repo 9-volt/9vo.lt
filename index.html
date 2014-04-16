@@ -1,13 +1,23 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: ''
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% include header.html %}
+{% include hero.html %}
+
+<!-- container start -->
+<div class="container" id="container">
+  <h2 class="title">PROJECTS</h2>
+  <div class="blocks">
+    {% for project in site.categories.projects %}
+      <div class="block"><a href="{{ project.url }}"><img src="{{ site.baseurl }}/images/{{ project.thumbnail }}" alt="{{ project.title }}"></a></div>
     {% endfor %}
-  </ul>
+
+    <div class="clearfix"></div>
+    <a href="projects.html" class="more btn btn-green">VIEW MORE</a>
+  </div>
 </div>
+<!-- container end -->
+
+{% include footer.html %}

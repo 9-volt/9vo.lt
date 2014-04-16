@@ -86,13 +86,22 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+    copy: {
+      all: {
+        files: [
+          // includes files within path
+          {expand: true, src: ['css/*'], dest: '_site/', filter: 'isFile'}
+        ]
+      }
     }
   });
 
   grunt.registerTask('build', [
     'stylus:production',
     'clean',
-    'template'
+    'template',
+    'copy'
   ]);
 
   // build alias

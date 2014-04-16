@@ -6,3 +6,7 @@ node_modules
 
 # Temporary files
 *.tmp
+.DS_Store
+
+# Jekyll
+_site/

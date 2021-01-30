@@ -2,5 +2,5 @@ name: 9vo.lt
 markdown: redcarpet
 pygments: true
 permalink: /blog/:title/
-baseurl: "http://9vo.lt"
+baseurl: "https://9vo.lt"
 exclude: [node_modules, mockup, src, CNAME, Gruntfile.js, package.json, params.json, README.md]
